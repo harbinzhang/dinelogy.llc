@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
           
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-6">
             <Link
               to="/"
               className={`px-3 py-2 text-sm font-medium transition-colors ${
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
                   : 'text-gray-700 hover:text-primary-600'
               }`}
             >
-              Home
+              Platform
             </Link>
             <Link
               to="/product"
@@ -35,8 +35,24 @@ const Navbar: React.FC = () => {
                   : 'text-gray-700 hover:text-primary-600'
               }`}
             >
-              Product
+              Features
             </Link>
+            <a
+              href="https://barcode-food-seller.web.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors"
+            >
+              Restaurant Demo
+            </a>
+            <a
+              href="https://barcode-food-order.web.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors"
+            >
+              Customer Demo
+            </a>
             <Link
               to="/contact"
               className={`px-3 py-2 text-sm font-medium transition-colors ${
@@ -51,7 +67,7 @@ const Navbar: React.FC = () => {
               to="/login"
               className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 transition-colors"
             >
-              Login
+              Get Started
             </Link>
           </div>
         </div>
