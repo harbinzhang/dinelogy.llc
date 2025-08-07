@@ -31,14 +31,6 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="text-primary-600 text-xl mr-4">📞</div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">(555) 123-4567</p>
-                    <p className="text-gray-600">Mon-Fri 9AM-6PM EST</p>
-                  </div>
-                </div>
                 
                 <div className="flex items-start">
                   <div className="text-primary-600 text-xl mr-4">📍</div>
