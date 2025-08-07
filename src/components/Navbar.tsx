@@ -37,22 +37,6 @@ const Navbar: React.FC = () => {
             >
               Features
             </Link>
-            <a
-              href="https://barcode-food-seller.web.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors"
-            >
-              Restaurant Demo
-            </a>
-            <a
-              href="https://barcode-food-order.web.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors"
-            >
-              Customer Demo
-            </a>
             <Link
               to="/contact"
               className={`px-3 py-2 text-sm font-medium transition-colors ${
