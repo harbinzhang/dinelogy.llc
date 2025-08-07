@@ -26,7 +26,6 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-gray-300">
               <li>Email: info@dinelogy.com</li>
-              <li>Phone: (555) 123-4567</li>
               <li>Address: 123 Tech Street, Suite 100</li>
             </ul>
           </div>
