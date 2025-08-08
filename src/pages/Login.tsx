@@ -53,9 +53,9 @@ const Login: React.FC = () => {
                   </label>
                 </div>
                 
-                <a href="#" className="text-sm text-primary-600 hover:text-primary-500">
+                <span className="text-sm text-gray-400">
                   Forgot password?
-                </a>
+                </span>
               </div>
               
               <button
@@ -85,9 +85,9 @@ const Login: React.FC = () => {
             
             <p className="mt-8 text-center text-sm text-gray-600">
               Don't have an account?{' '}
-              <a href="#" className="text-primary-600 hover:text-primary-500 font-medium">
+              <span className="text-gray-400 font-medium">
                 Sign up for free
-              </a>
+              </span>
             </p>
           </div>
         </div>
