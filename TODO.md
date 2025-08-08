@@ -32,7 +32,7 @@ The following links were identified as fake placeholders (`href="#"`) and have b
 ### Working External Links
 The following external links are functional and should remain:
 - `https://dinelogy.app` - Restaurant Dashboard
-- `https://barcode-food-order.web.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0` - Customer App Demo
+- `https://order.dinelogy.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0` - Customer App Demo
 
 ## Notes
 - All fake links have been converted to `<span>` elements with gray styling to indicate they are not functional
