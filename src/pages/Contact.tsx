@@ -1,7 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import Layout from '../components/Layout'
 
 const Contact: React.FC = () => {
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    
+    setFormStatus('sending');
+    
+    try {
+      // EmailJS configuration from your screenshots
+      const serviceID = 'service_jt58xcc';
+      const templateID = 'template_7ubacbu';  
+      const publicKey = 'HuSbZhTdJFEUjaY2k';
+      
+      const formData = new FormData(form);
+      const templateParams = {
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message'),
+        time: new Date().toLocaleString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          timeZoneName: 'short'
+        })
+      };
+      
+      console.log('Sending email with:', templateParams);
+      
+      // Send email using EmailJS
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+      
+      setFormStatus('success');
+      form.reset();
+      
+      // Reset status after 5 seconds
+      setTimeout(() => {
+        setFormStatus('idle');
+      }, 5000);
+      
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setFormStatus('error');
+      
+      // Reset error status after 5 seconds
+      setTimeout(() => {
+        setFormStatus('idle');
+      }, 5000);
+    }
+  };
+
   return (
     <Layout>
       <div className="py-20">
@@ -48,20 +103,7 @@ const Contact: React.FC = () => {
             <div>
               <form 
                 className="bg-white p-6 rounded-lg shadow-md"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const formData = new FormData(e.currentTarget);
-                  const name = formData.get('name');
-                  const email = formData.get('email');
-                  const subject = formData.get('subject');
-                  const message = formData.get('message');
-                  
-                  const mailtoLink = `mailto:seashore.real@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(
-                    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-                  )}`;
-                  
-                  window.location.href = mailtoLink;
-                }}
+                onSubmit={handleSubmit}
               >
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Send us a Message
@@ -126,11 +168,43 @@ const Contact: React.FC = () => {
                   
                   <button
                     type="submit"
-                    className="w-full bg-primary-600 text-white py-2 px-4 rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors"
+                    disabled={formStatus === 'sending'}
+                    className={`w-full py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors ${
+                      formStatus === 'sending' 
+                        ? 'bg-gray-400 text-white cursor-not-allowed' 
+                        : 'bg-primary-600 text-white hover:bg-primary-700'
+                    }`}
                   >
-                    Send Message
+                    {formStatus === 'sending' ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
+                
+                {/* Loading Message */}
+                {formStatus === 'sending' && (
+                  <div className="mt-4 p-4 bg-blue-100 border border-blue-400 text-blue-700 rounded-md">
+                    <p className="font-semibold">Sending your message...</p>
+                    <p className="text-sm mt-1">Please wait while we process your request.</p>
+                  </div>
+                )}
+                
+                {/* Success Message */}
+                {formStatus === 'success' && (
+                  <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+                    <p className="font-semibold">Message sent successfully! ✅</p>
+                    <p className="text-sm mt-1">Your message has been sent to seashore.real@gmail.com. We'll get back to you soon!</p>
+                  </div>
+                )}
+                
+                {/* Error Message */}
+                {formStatus === 'error' && (
+                  <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+                    <p className="font-semibold mb-2">Failed to send message ❌</p>
+                    <p className="text-sm mb-3">Please try again or contact us directly at:</p>
+                    <p className="text-sm font-mono bg-white p-2 rounded border">
+                      seashore.real@gmail.com
+                    </p>
+                  </div>
+                )}
               </form>
             </div>
           </div>
