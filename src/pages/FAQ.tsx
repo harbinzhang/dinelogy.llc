@@ -29,7 +29,7 @@ const FAQ: React.FC = () => {
     {
       id: 4,
       question: "How can I contact Dinelogy customer service?",
-      answer: "To contact Dinelogy's customer service team, you can reach us through the following methods: Email us at info@dinelogy.com for general inquiries and support@dinelogy.com for technical support. You can also contact us through our website's contact form or visit our office at 123 Tech Street, Suite 100, San Francisco, CA 94102."
+      answer: "To contact Dinelogy's customer service team, you can reach us through the following methods: Email us at info@dinelogy.com for general inquiries and support@dinelogy.com for technical support. You can also contact us through our website's contact form or visit our office at 2108 N ST STE N, Sacramento, CA 95816, USA."
     },
     {
       id: 5,
