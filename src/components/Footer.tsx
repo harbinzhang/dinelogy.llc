@@ -19,6 +19,9 @@ const Footer: React.FC = () => {
               <li><span className="text-gray-400">Features</span></li>
               <li><span className="text-gray-400">Pricing</span></li>
               <li><span className="text-gray-400">Support</span></li>
+              <li><span className="text-gray-400">FAQS</span></li>
+              <li><span className="text-gray-400">Privacy Policy</span></li>
+              <li><span className="text-gray-400">Terms of Use</span></li>
             </ul>
           </div>
           
