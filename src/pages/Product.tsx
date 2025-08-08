@@ -68,9 +68,12 @@ const Product: React.FC = () => {
               Ready to Transform Your Restaurant?
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Join hundreds of restaurants already using our system
+              Experience the power of QR code ordering for your restaurant
             </p>
-            <button className="bg-primary-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-700 transition-colors">
+            <button 
+              onClick={() => window.open('https://dinelogy.app', '_blank')}
+              className="bg-primary-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-700 transition-colors"
+            >
               Request Demo
             </button>
           </div>
