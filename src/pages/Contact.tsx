@@ -46,7 +46,23 @@ const Contact: React.FC = () => {
             </div>
             
             <div>
-              <form className="bg-white p-6 rounded-lg shadow-md">
+              <form 
+                className="bg-white p-6 rounded-lg shadow-md"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const name = formData.get('name');
+                  const email = formData.get('email');
+                  const subject = formData.get('subject');
+                  const message = formData.get('message');
+                  
+                  const mailtoLink = `mailto:seashore.real@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(
+                    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+                  )}`;
+                  
+                  window.location.href = mailtoLink;
+                }}
+              >
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Send us a Message
                 </h2>
@@ -59,6 +75,8 @@ const Contact: React.FC = () => {
                     <input
                       type="text"
                       id="name"
+                      name="name"
+                      required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                       placeholder="Your name"
                     />
@@ -71,6 +89,8 @@ const Contact: React.FC = () => {
                     <input
                       type="email"
                       id="email"
+                      name="email"
+                      required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                       placeholder="your.email@example.com"
                     />
@@ -83,6 +103,8 @@ const Contact: React.FC = () => {
                     <input
                       type="text"
                       id="subject"
+                      name="subject"
+                      required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                       placeholder="How can we help?"
                     />
@@ -94,6 +116,8 @@ const Contact: React.FC = () => {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
+                      required
                       rows={4}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                       placeholder="Tell us more about your needs..."

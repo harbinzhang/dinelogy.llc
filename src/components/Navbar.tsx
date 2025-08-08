@@ -47,12 +47,12 @@ const Navbar: React.FC = () => {
             >
               Contact
             </Link>
-            <Link
-              to="/login"
+            <button
+              onClick={() => window.open('https://dinelogy.app', '_blank')}
               className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 transition-colors"
             >
               Get Started
-            </Link>
+            </button>
           </div>
         </div>
       </div>
