@@ -36,7 +36,8 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-gray-300">
               <li>Email: info@dinelogy.com</li>
-              <li>Address: 123 Tech Street, Suite 100</li>
+              <li>Address: 2108 N ST STE N</li>
+              <li>Sacramento, CA 95816, USA</li>
             </ul>
           </div>
         </div>

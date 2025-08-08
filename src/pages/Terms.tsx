@@ -188,8 +188,8 @@ const Terms: React.FC = () => {
               <div className="bg-gray-50 p-6 rounded-lg">
                 <ul className="space-y-2">
                   <li><strong>Email:</strong> info@dinelogy.com</li>
-                  <li><strong>Address:</strong> 123 Tech Street, Suite 100, San Francisco, CA 94102</li>
                   <li><strong>Company:</strong> Dinelogy LLC</li>
+                  <li><strong>Address:</strong> 2108 N ST STE N, Sacramento, CA 95816, USA</li>
                 </ul>
               </div>
             </section>

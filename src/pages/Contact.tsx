@@ -36,8 +36,10 @@ const Contact: React.FC = () => {
                   <div className="text-primary-600 text-xl mr-4">📍</div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Address</h3>
-                    <p className="text-gray-600">123 Tech Street, Suite 100</p>
-                    <p className="text-gray-600">San Francisco, CA 94102</p>
+                    <p className="text-gray-600">Dinelogy LLC</p>
+                    <p className="text-gray-600">2108 N ST STE N</p>
+                    <p className="text-gray-600">Sacramento, CA 95816</p>
+                    <p className="text-gray-600">USA</p>
                   </div>
                 </div>
               </div>
