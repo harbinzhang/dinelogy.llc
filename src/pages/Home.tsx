@@ -24,7 +24,7 @@ const Home: React.FC = () => {
                 Try Restaurant Dashboard →
               </button>
               <button
-                onClick={() => window.open('https://barcode-food-order.web.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0', '_blank')}
+                onClick={() => window.open('https://order.dinelogy.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0', '_blank')}
                 className="border border-primary-600 text-primary-600 px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-50 transition-colors"
               >
                 Try Customer App(Example) →
@@ -124,7 +124,7 @@ const Home: React.FC = () => {
                 Customers scan QR codes to access their table-specific ordering page, browse categorized menus with search, add items to cart, and checkout with integrated payments.
               </p>
               <a
-                href="https://barcode-food-order.web.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0"
+                href="https://order.dinelogy.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-block"
@@ -232,7 +232,7 @@ const Home: React.FC = () => {
               Try Restaurant Dashboard
             </button>
             <button
-              onClick={() => window.open('https://barcode-food-order.web.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0', '_blank')}
+              onClick={() => window.open('https://order.dinelogy.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0', '_blank')}
               className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-200 min-w-[200px]"
             >
               Try Customer App(Example)
