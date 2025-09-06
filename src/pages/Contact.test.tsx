@@ -3,6 +3,7 @@ import { render, screen, fireEvent, waitFor } from '../test/test-utils'
 import userEvent from '@testing-library/user-event'
 import Contact from './Contact'
 import emailjs from '@emailjs/browser'
+import type { EmailJSResponseStatus } from '@emailjs/browser'
 
 vi.mock('@emailjs/browser')
 
@@ -52,7 +53,7 @@ describe('Contact Component', () => {
     mockSend.mockResolvedValueOnce({
       status: 200,
       text: 'OK'
-    } as any)
+    } as EmailJSResponseStatus)
 
     render(<Contact />)
     const user = userEvent.setup()
@@ -113,7 +114,7 @@ describe('Contact Component', () => {
   it('disables submit button while sending', async () => {
     const mockSend = vi.mocked(emailjs.send)
     mockSend.mockImplementation(() => 
-      new Promise(resolve => setTimeout(() => resolve({ status: 200, text: 'OK' } as any), 100))
+      new Promise<EmailJSResponseStatus>(resolve => setTimeout(() => resolve({ status: 200, text: 'OK' } as EmailJSResponseStatus), 100))
     )
 
     render(<Contact />)
@@ -157,7 +158,7 @@ describe('Contact Component', () => {
     mockSend.mockResolvedValueOnce({
       status: 200,
       text: 'OK'
-    } as any)
+    } as EmailJSResponseStatus)
 
     render(<Contact />)
     const user = userEvent.setup()
