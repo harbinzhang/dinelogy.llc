@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary-600">
+            <Link to="/" className="text-2xl font-bold text-primary-500">
               Dinelogy
             </Link>
           </div>
@@ -21,8 +21,8 @@ const Navbar: React.FC = () => {
               to="/"
               className={`px-3 py-2 text-sm font-medium transition-colors ${
                 isActive('/') 
-                  ? 'text-primary-600 border-b-2 border-primary-600' 
-                  : 'text-gray-700 hover:text-primary-600'
+                  ? 'text-primary-500 border-b-2 border-primary-500' 
+                  : 'text-gray-700 hover:text-primary-400'
               }`}
             >
               Platform
@@ -31,8 +31,8 @@ const Navbar: React.FC = () => {
               to="/product"
               className={`px-3 py-2 text-sm font-medium transition-colors ${
                 isActive('/product') 
-                  ? 'text-primary-600 border-b-2 border-primary-600' 
-                  : 'text-gray-700 hover:text-primary-600'
+                  ? 'text-primary-500 border-b-2 border-primary-500' 
+                  : 'text-gray-700 hover:text-primary-400'
               }`}
             >
               Features
@@ -41,15 +41,15 @@ const Navbar: React.FC = () => {
               to="/contact"
               className={`px-3 py-2 text-sm font-medium transition-colors ${
                 isActive('/contact') 
-                  ? 'text-primary-600 border-b-2 border-primary-600' 
-                  : 'text-gray-700 hover:text-primary-600'
+                  ? 'text-primary-500 border-b-2 border-primary-500' 
+                  : 'text-gray-700 hover:text-primary-400'
               }`}
             >
               Contact
             </Link>
             <button
               onClick={() => window.open('https://dinelogy.app', '_blank')}
-              className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 transition-colors"
+              className="bg-primary-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-600 transition-colors"
             >
               Get Started
             </button>

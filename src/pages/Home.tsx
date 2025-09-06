@@ -10,7 +10,7 @@ const Home: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
               Restaurant Digitization Platform
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-primary-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-primary-500 mb-6">
               QR Ordering + Management System
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -19,13 +19,13 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 onClick={() => window.open('https://dinelogy.app', '_blank')}
-                className="bg-primary-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-700 transition-colors"
+                className="bg-primary-500 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-600 transition-colors"
               >
                 Try Restaurant Dashboard →
               </button>
               <button
                 onClick={() => window.open('https://order.dinelogy.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0', '_blank')}
-                className="border border-primary-600 text-primary-600 px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-50 transition-colors"
+                className="border border-primary-500 text-primary-500 px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-50 transition-colors"
               >
                 Try Customer App(Example) →
               </button>
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg hover:bg-primary-50 transition-all">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚡</span>
               </div>
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
               <p className="text-gray-600">Get started fast — add tables, upload your menu, and you're live.</p>
             </div>
 
-            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg hover:bg-primary-50 transition-all">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌐</span>
               </div>
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
               <p className="text-gray-600">Fast, secure, and always on — built on trusted global cloud providers.</p>
             </div>
 
-            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg hover:bg-primary-50 transition-all">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎧</span>
               </div>
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
               <p className="text-gray-600">Need help? Our team is here anytime, day or night.</p>
             </div>
 
-            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg hover:bg-primary-50 transition-all">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💲</span>
               </div>
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
                 href="https://dinelogy.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-block"
+                className="text-primary-500 font-medium hover:text-primary-600 transition-colors inline-block"
               >
                 → Try Restaurant Dashboard
               </a>
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
                 href="https://order.dinelogy.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-block"
+                className="text-primary-500 font-medium hover:text-primary-600 transition-colors inline-block"
               >
                 → Try Customer App(Example)
               </a>
@@ -182,7 +182,7 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col h-full bg-white rounded-lg shadow-sm border border-gray-100 p-8 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🛡️</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Reliable by Design</h3>
@@ -192,7 +192,7 @@ const Home: React.FC = () => {
             </div>
 
             <div className="flex flex-col h-full bg-white rounded-lg shadow-sm border border-gray-100 p-8 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">⚡</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Fast, Anywhere</h3>
@@ -202,7 +202,7 @@ const Home: React.FC = () => {
             </div>
 
             <div className="flex flex-col h-full bg-white rounded-lg shadow-sm border border-gray-100 p-8 text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary-300 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🏦</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Enterprise Security</h3>
@@ -216,7 +216,7 @@ const Home: React.FC = () => {
 
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-primary-600">
+      <section className="py-20" style={{ backgroundColor: '#42AAC3' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Try the Full Dinelogy Platform — No Setup, No Commitment
@@ -227,13 +227,17 @@ const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-6">
             <button
               onClick={() => window.open('https://dinelogy.app', '_blank')}
-              className="bg-white text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 hover:shadow-lg transition-all duration-200 min-w-[200px]"
+              className="bg-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 hover:shadow-lg transition-all duration-200 min-w-[200px]"
+              style={{ color: '#42AAC3' }}
             >
               Try Restaurant Dashboard
             </button>
             <button
               onClick={() => window.open('https://order.dinelogy.app/seller/NaUZUMs2hoMdofeotgR3xUnf51D3/table/0', '_blank')}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-200 min-w-[200px]"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white transition-all duration-200 min-w-[200px]"
+              style={{ '--hover-color': '#00CDFE' } as React.CSSProperties}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#42AAC3'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
             >
               Try Customer App(Example)
             </button>
