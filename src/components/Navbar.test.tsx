@@ -50,7 +50,7 @@ describe('Navbar Component', () => {
     render(<Navbar />)
     
     const platformLink = screen.getByRole('link', { name: 'Platform' })
-    expect(platformLink).toHaveClass('text-primary-600', 'border-b-2', 'border-primary-600')
+    expect(platformLink).toHaveClass('text-primary-500', 'border-b-2', 'border-primary-500')
   })
 
   it('applies hover styles to inactive links', () => {
@@ -59,8 +59,8 @@ describe('Navbar Component', () => {
     const featuresLink = screen.getByRole('link', { name: 'Features' })
     const contactLink = screen.getByRole('link', { name: 'Contact' })
     
-    expect(featuresLink).toHaveClass('text-gray-700', 'hover:text-primary-600')
-    expect(contactLink).toHaveClass('text-gray-700', 'hover:text-primary-600')
+    expect(featuresLink).toHaveClass('text-gray-700', 'hover:text-primary-400')
+    expect(contactLink).toHaveClass('text-gray-700', 'hover:text-primary-400')
   })
 
   it('has proper accessibility attributes', () => {

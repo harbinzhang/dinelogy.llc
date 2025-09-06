@@ -56,7 +56,7 @@ describe('Footer Component', () => {
     render(<Footer />)
     
     const footer = screen.getByRole('contentinfo')
-    expect(footer).toHaveClass('bg-gray-800', 'text-white', 'py-8')
+    expect(footer).toHaveClass('bg-primary-700', 'text-white', 'py-8')
   })
 
   it('applies hover effects to active links', () => {
